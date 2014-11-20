@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context="http://www.springframework.org/schema/context"
+   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">   
+       
+   <!-- Database -->
+   <bean id="dataSourceBean" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+      <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+      <property name="url" value="jdbc:oracle:thin:@192.168.7.43:1521:xe"/>
+      <property name="username" value="yodde"/>
+      <property name="password" value="1234"></property>
+   </bean>
+    
+   <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+      <property name="dataSource" ref="dataSourceBean"/>
+      <property name="mapperLocations">
+         <list>
+            <value>classpath:storeModel/StoreMapper.xml</value>
+            <value>classpath:memberModel/MemberMapper.xml</value>
+            <value>classpath:ownerModel/OwnerMapper.xml</value>
+         </list>
+      </property>
+   </bean>
+    
+   <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+     
+    
+   <!-- 패키지 내의 @Component 가 있는 클래스만 bean을 등록한다. -->
+   <context:component-scan base-package="home"/>
+   <context:component-scan base-package="memberAction" />
+   <context:component-scan base-package="ownerAction" />
+   <context:component-scan base-package="relationAction" />
+   <context:component-scan base-package="reviewAction" />
+   <context:component-scan base-package="storeAction" />
+    
+   <context:component-scan base-package="storeModel" />
+   <context:component-scan base-package="memberModel" />
+   <context:component-scan base-package="ownerModel" />
+        
+   <!-- 
+   <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+      <property name="maxUploadSize" value="524288800"/>
+      <property name="defaultEncoding" value="utf-8"/>
+   </bean>
+    -->
+</beans>

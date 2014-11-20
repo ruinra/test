@@ -2,21 +2,13 @@
 body{
 	margin:0px 0px 0px 0px;
 	background-color:#F38983;
-	
-	/* scrollbar-face-color:#FFFFFF; 		스크롤바의 색을 지정
-	scrollbar-track-color:#000000; 		배경 부분의 색을 지정
-	scrollbar-arrow-color:#FFFFFF; 		화살표 버튼의 색을 지정
-	scrollbar-highlight-color:#FFFFFF; 	스크롤바의 왼쪽과 위쪽의 안쪽 색을 설정
-	scrollbar-shadow-color:#FFFFFF; 	스크롤바의 오른쪽과 밑에 들어가는 안쪽 색 지정
-	scrollbar-3dlight-color:#000000; 	스크롤바의 왼쪽과 위쪽 바탕으로 들어가는 색 지정
-	scrollbar-darkshadow-color:#000000; 스크롤바의 오른쪽과 밑에 그림자의 색을 지정 */
 }
 A:link{text-decoration:none;}
 A:visited{text-decoration:none;}
 A:hover{}
 
 .search_bar{
-	padding:90px 0px 5px 2%;
+	padding:90px 0px 10px 2%;
 	background-color:#F38983;
 	text-align:center;
 }
@@ -43,8 +35,9 @@ A:hover{}
 	margin-right:10px;
 	opacity:0.5;
 }
+
 .content{
-	width:98%;
+	width:98%;		height:auto;
 	margin:0px 0px 10px 10px;
 	background-color:white;
 	float:center;
@@ -54,11 +47,12 @@ A:hover{}
 }
 .store_box{
 	width:73%;
-	margin:10px 0px 20px 17%;
+	margin:0px 0px 20px 17%;
 	padding-top:30px;
 	
 	font-family:맑은 고딕;
 	font-size:15px;
+	
 }
 .store_box_title{
 	z-index:100;
@@ -75,7 +69,7 @@ A:hover{}
 	opacity:0.6;
 }
 
-
+/* 
 .result_content{
 	padding:20px 30px 10px 200px;
 }
@@ -107,4 +101,154 @@ A:hover{}
 	width:80%; height:25px;
 	margin:2px 0px 10px 0px;
 	text-align:right;
+} */
+
+
+<!-- hotPlace -->
+.HP_content{
+	padding: 130px 10% 30px 15%;
+	height:auto;
+	width:74%;
 }
+.HP_box{
+	height: 630px;
+	margin: 0px 0px 20px 12%;
+	padding-top: 40px;
+	font-family: 맑은 고딕;
+	font-size: 15px;
+}
+.HP_title{
+	width: 930px; 	height: 50px;
+	margin-bottom: 30px;
+	padding : 10px 0px 0px 0px;
+	text-align: center;
+	border:solid 2px #DD5050;
+	
+	font-size:40px;
+	font-family:맑은 고딕;
+	color: #DD5050;
+	font-weight:bold;
+}
+.HP_thumbnails{
+	width:950px;	height:600px;
+	padding:0px 0px 0px 0px;
+}
+.HP_stores{
+	width: 300px; 	height: 500px;
+	float: left;
+	margin-right: 10px;
+	
+	text-align: center;
+	border: solid 2px #F38983;
+}
+.HP_store_name{
+	padding-bottom: 5px;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 맑은 고딕;
+	color: white;
+	background-color: #F38983;
+}
+.HP_store_address{
+	float:center;
+	font-size:14px;
+}
+.HP_store_pic{
+	margin: 10px 0px 10px 0px;
+}
+.HP_store_starrate{
+}
+.HP_store_reviewnum{
+	margin:10px 10px 5px 0px;
+	float:left;
+}
+.reviewnum_title{
+}
+.review_num{
+	margin-left: 10px;
+	font-size:40px;
+	font-weight:bold;
+	color:#7C7475;
+}
+
+
+<!-- regCenter -->
+.RC_content{
+	padding: 130px 10% 30px 15%;
+	height:auto;
+	width:74%;
+}
+.RC_box{
+	height: 1350px;
+	margin: 0px 0px 20px 12%;
+	padding-top: 40px;
+	font-family: 맑은 고딕;
+	font-size: 15px;
+}
+.RC_title{
+	width:930px; 	height:50px;
+	margin-bottom: 30px;
+	padding : 10px 0px 0px 0px;
+	text-align: center;
+	border:solid 2px #DD5050;
+	
+	font-size:40px;
+	font-family:맑은 고딕;
+	color: #DD5050;
+	font-weight:bold;
+}
+.RC_map_box{
+	width:930px;
+	margin:30px 0px 50px 0px;
+}
+.user_reg{
+	text-align:right;
+	font-family:맑은 고딕;
+	font-size:15px;
+}
+.RC_map{
+	width:930px;	height:300px;
+	background-color:#DCDCDF;
+}
+.RC_thumbnails{
+	width:950px;	height:600px;
+	padding:0px 0px 0px 0px;
+}
+.RC_stores{
+	width: 225px; 	height: 400px;
+	margin: 0px 5px 20px 0px;
+	float: left;
+	text-align: center;
+	border: solid 2px #F38983;
+}
+.RC_store_name{
+	padding-bottom: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: 맑은 고딕;
+	color: white;
+	background-color: #F38983;
+}
+.RC_store_address{
+	float:center;
+	font-size:14px;
+}
+.RC_store_pic{
+	margin: 10px 0px 5px 0px;
+}
+.RC_store_starrate{
+}
+.RC_store_reviewnum{
+	margin:10px 10px 5px 0px;
+	float:left;
+}
+.RC_review_num {
+margin-left: 10px;
+font-size: 30px;
+font-weight: bold;
+color: #7C7475;
+}
+
+
+
+

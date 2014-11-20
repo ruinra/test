@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="www.yodde.co.kr/store">
+	<insert id="storeJoin" parameterType="ownerModel.OwnerDto">
+		insert into owner(email, storeId, password, registerNum, profilePic) values(
+			#{email},
+			#{storeId},
+			#{password},
+			#{registerNum},
+			#{profilePic, jdbcType=VARCHAR}
+		)
+	</insert>
+</mapper>

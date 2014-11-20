@@ -7,7 +7,7 @@
 		<title>Insert title here</title>
 		<link rel="stylesheet" type="text/css" href="../common/common.css"/>		<!-- footer, title css -->
 		<link rel="stylesheet" type="text/css" href="../common/category.css" />		<!-- category css -->
-		<link rel="stylesheet" type="text/css" href="main.css"/>					<!-- main css -->
+		<link rel="stylesheet" type="text/css" href="../main/main.css"/>			<!-- main css -->
 	
 		<link rel="stylesheet" type="text/css" href="owner.css">
 		<script type="text/javascript" src="../jquery/jquery.js"></script>

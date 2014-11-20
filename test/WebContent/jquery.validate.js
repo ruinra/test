@@ -62,6 +62,7 @@ $.extend($.fn, {
 					event.preventDefault();
 				}
 				function handle() {
+					
 					var hidden, result;
 					if ( validator.settings.submitHandler ) {
 						if ( validator.submitButton ) {
@@ -314,6 +315,7 @@ $.extend( $.validator, {
 		remote: "Please fix this field.",
 		email: "Please enter a valid email address.",
 		business: "Please enter a valid business.",
+		zip2: "Please enter a valid zip2.",
 		url: "Please enter a valid URL.",
 		date: "Please enter a valid date.",
 		dateISO: "Please enter a valid date ( ISO ).",
@@ -932,7 +934,8 @@ $.extend( $.validator, {
 		dateISO: { dateISO: true },
 		number: { number: true },
 		digits: { digits: true },
-		creditcard: { creditcard: true }
+		creditcard: { creditcard: true },
+		zip2: { zip2: true }
 	},
 
 	addClassRules: function( className, rules ) {
@@ -1181,6 +1184,11 @@ $.extend( $.validator, {
 			return false;
 		},
 
+		// http://jqueryvalidation.org/number-method/
+		zip2: function( value, element ) {
+			return this.optional( element ) || /[0-9]/.test( value );
+		},
+		
 		// http://jqueryvalidation.org/digits-method/
 		digits: function( value, element ) {
 			return this.optional( element ) || /^\d+$/.test( value );

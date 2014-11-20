@@ -9,6 +9,7 @@ A:hover{text-decoration:none;}
 
 .content_modifyStore{
 	padding-top:50px;
+	padding-bottom:30px;
 }
 .store_info{
 	height: 190px; 	width: 520px;
@@ -26,9 +27,7 @@ A:hover{text-decoration:none;}
 	margin-bottom:20px;
 }
 /* .result_title{
-	align:left;
-	margin:0px 0px 20px 200px;
-	opacity:0.9;
+	margin-bottom:30px;
 } */
 .input{
 
@@ -117,4 +116,63 @@ p{
 }
 .bottom_Btn{
 	text-align:center;
+}
+
+
+<!-- storeMypage -->
+.content{
+	height:auto;	
+}
+.myPage_content{
+	padding-top:50px;
+}
+
+.myPage_box{
+	width:600px; height:70%;
+	margin:6% 0px 0px 25%;
+	padding:0px 0px 0px 0px;
+}
+.content_box{
+	height: 240px;
+	padding-left: 10px;
+	margin-bottom: 50px;
+	background-color: #F4F4F4;
+}
+.myProfile{
+	width: 150px;
+	margin: 30px 10px 10px 35px;
+	float: left;
+	text-align: center;
+}
+.myPhoto{
+}
+.myNick{
+	font-weight:bold;
+	font-family:맑은 고딕;
+}
+.profile_content{
+	padding: 10px 10px 20px 200px;
+}
+.profile_input{
+	width:80px; height:25px;
+	margin:0px 0px 0px 0px;
+
+	border:none;
+	border-bottom:2px dotted #F38983;
+	background-color:#F4F4F4;
+
+	font-size:18px;
+	font-family:맑은 고딕;
+	font-weight:bold;
+	text-align:center;
+	color:#7C7475;
+}
+.label{
+	font-size: 18px;
+	font-family: 맑은 고딕;
+	padding: 0px 10px 0px 10px;
+	color: #7C7475;
+}
+.review_box{
+	
 }

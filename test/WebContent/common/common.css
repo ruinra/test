@@ -19,7 +19,7 @@ A:hover{text-decoration:none;}
 	
 }
 .title_center{
-	margin:0px 0px 0px 500px;
+	margin:0px 0px 0px 43%;
 }
 .title_btn1{				/*카테고리버튼*/
 	margin:5px 15px 0px 0%;
@@ -34,7 +34,7 @@ A:hover{text-decoration:none;}
 } 
 .title_right{
 	color:white;
-	margin-left:30%;
+	margin-left:23%;
 	padding-bottom:15px;
 	font-size:22px;
 	font-family:맑은 고딕;
@@ -47,6 +47,17 @@ A:hover{text-decoration:none;}
 	background-color:#F4F4F4;
 	
 	left:0; right:0; bottom:0;
+}
+.main_footer {
+	width: 100%;
+	height: 80px;
+	size: fixed;
+	margin: 20px 0px 0px 0px;
+	padding: 20px 0px 10px 0px;
+	background-color: #F4F4F4;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 .letter{
 	font-size:12px;

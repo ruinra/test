@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 	<head>
@@ -12,6 +13,35 @@
 		
 		<script type="text/javascript" src="../jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="../jquery.validate.js"></script>
+		<script src="http://dmaps.daum.net/map_js_init/postcode.js"></script>
+		
+		<script>
+			function openDaumPostcode() {
+				new daum.Postcode({
+					oncomplete : function(data) {
+		
+						// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분. 
+						// 우편번호와 주소 정보를 해당 필드에 넣고, 커서를 상세주소 필드로 이동한다. 
+						document.getElementById('zip1').value = data.postcode1;
+						document.getElementById('zip2').value = data.postcode2;
+		// 				document.getElementById('addr1').value = data.address;
+		
+						document.getElementById('zip2').focus();
+		// 				document.getElementById('zip1').focus();
+						
+						var input=document.getElementById("zip2");
+						if(input.value !=""){
+							var label=document.getElementById("postCheck");
+							for(var i=0;i<label.childNodes.length;i++){
+								if(label.childNodes[i].nodeType==3){
+									label.childNodes[i].nodeValue="";
+								}
+							}
+						}
+					}
+				}).open();
+			}
+		</script>
 		
 		<script type="text/javascript">
 			 $(document).ready(function(){
@@ -77,7 +107,7 @@
 		<div class="content">
 			<div class="content_memberJoin">
 				<div class="memberJoin_box">
-					<form id="valiex" novalidate="novalidate">
+					<form id="valiex" novalidate="novalidate" action="valiex('${root}')">
 						<div class="result_title">				<!-- login title -->
 							<img src="./../images/join_mem.png" height="55">
 						</div>
@@ -105,14 +135,24 @@
 							placeholder=" PASSWORD" onfocus="this.placeholder=''" onblur="this.placeholder=' PASSWORD'">
 							<label for="pwchk" generated="true" class="error"> 비밀번호를 다시 한 번 입력하세요.</label>
 						</p>
+						<p>
+							<img src="./../images/pick.png" height="25">
+							
+							<input type="text" id="zip1" name="zip1" class="join_input_half error" style="ime-mode: active;">
+							- <input type="text" id="zip2" name="zip2" class="join_input_half error" style="ime-mode: active;">
+							<a id="zipcode" name="zipcode" type="button" onclick="openDaumPostcode()"> 
+								<img src="./../images/zipcode.png" height="25">
+							</a>
+							<label id="postCheck" name="postCheck" for="zip2" generated="true" class="error"> 우편번호를 입력하세요.</label>
+						
+						</p>
 						
 						<div class="bottom_Btn">
-							<a href="" onclick="">
-								<img src="./../images/ok.png" height="30">
-							</a>
-							<a href="" onclick="">
-								<img src="./../images/cancel.png" height="30">
-							</a>
+							<button type="submit" style="height:30px; width:90px; border:none; background-image: url(./../images/ok.png); background-size: 100%;">
+							</button>
+							
+							<button type="reset" style="height:30px; width:90px; border:none; background-image: url(./../images/cancel.png); background-size: 100%;">
+							</button>
 						</div>
 					</form>
 				</div>
